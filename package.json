@@ -1,0 +1,20 @@
+{
+  "name": "cosy-web",
+  "version": "0.0.1",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dervalp/cosyJS-web.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "ce54a71114114a5592f1084d667aee402b7de748",
+  "dependencies": {
+    "cosy-core": "0.0.3",
+    "cosy-client": "~0.1.4"
+  }
+}

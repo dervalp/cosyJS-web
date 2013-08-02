@@ -1,14 +1,23 @@
-var cosy = require( "cosy-core" );
+var cosy = require( "cosy-core" ),
+    AppServer = require( "./lib/server/application" ),
+    StaticServer = require( "./lib/server/static" );
 
 module.exports = function( app, conf ) {
-    start: function( cb ) {
-        cosy.start( conf, function( API ) {
-            appServer = require( "./server/application" )( API );
-            staticServer = require( "./server/static" )( API );
+    return {
+        start: function( cb ) {
+            cosy.start( conf, function( err, API ) {
+                if ( err ) {
+                    console.log( err );
+                    throw new Error( err );
+                }
 
-            appServer.setup( app );
-            staticServer.setup( app );
-            cb( );
-        } );
-    }
+                var appServer = AppServer( API );
+                var staticServer = StaticServer( API );
+
+                appServer.setup( app );
+                staticServer.setup( app );
+                cb( );
+            } );
+        }
+    };
 };
