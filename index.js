@@ -15,7 +15,7 @@ var defaultConfiguration = {
 
 module.exports = function( app, conf ) {
 
-    var configuration = defaults( conf, defaultConfiguration );
+    var configuration = defaults( defaultConfiguration, conf );
 
     return {
         start: function( cb ) {
