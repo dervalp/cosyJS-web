@@ -1,8 +1,22 @@
-var cosy = require( "cosy-core" ),
+var path = require( "path" ),
+    cosy = require( "cosy-core" ),
+    defaults = require( "./lib/utils/utils" ).defaults,
     AppServer = require( "./lib/server/application" ),
     StaticServer = require( "./lib/server/static" );
 
+//create default for configuration
+var defaultConfiguration = {
+    pages: path.normalize( process.cwd( ) + "/content/pages/" ),
+    grids: path.normalize( process.cwd( ) + "/content/grids/" ),
+    layouts: path.normalize( process.cwd( ) + "/content/layouts/" ),
+    middlewares: path.normalize( process.cwd( ) + "/content/middlewares/" ),
+    controllers: path.normalize( process.cwd( ) + "/content/controllers/" )
+};
+
 module.exports = function( app, conf ) {
+
+    var configuration = defaults( conf, defaultConfiguration );
+
     return {
         start: function( cb ) {
             cosy.start( conf, function( err, API ) {
