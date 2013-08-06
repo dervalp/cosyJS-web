@@ -19,7 +19,7 @@ module.exports = function( app, conf ) {
 
     return {
         start: function( cb ) {
-            cosy.start( conf, function( err, API ) {
+            cosy.start( configuration, function( err, API ) {
                 if ( err ) {
                     console.log( err );
                     throw new Error( err );
