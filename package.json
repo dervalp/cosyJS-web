@@ -13,7 +13,7 @@
   "license": "BSD",
   "gitHead": "ce54a71114114a5592f1084d667aee402b7de748",
   "dependencies": {
-    "cosy-core": "0.0.3",
-    "cosy-client": "~0.1.4"
+    "cosy-core": "0.0.4",
+    "cosy-client": "~0.1.6"
   }
 }
