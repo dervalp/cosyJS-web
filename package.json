@@ -1,6 +1,6 @@
 {
   "name": "cosy-web",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
   "license": "BSD",
   "gitHead": "ce54a71114114a5592f1084d667aee402b7de748",
   "dependencies": {
-    "cosy-core": "0.0.4",
-    "cosy-client": "~0.1.6"
+    "cosy-core": "0.0.5",
+    "cosy-client": "~0.1.8"
   }
 }
